@@ -1,0 +1,36 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#0E0E1A"/>
+  <!-- Background glow -->
+  <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+    <stop offset="0%" stop-color="#7C5CFF" stop-opacity="0.2"/>
+    <stop offset="100%" stop-color="#0E0E1A" stop-opacity="0"/>
+  </radialGradient>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+  <!-- Corner orb -->
+  <circle cx="1100" cy="80" r="220" fill="none" stroke="#7C5CFF" stroke-width="1" stroke-opacity="0.25"/>
+  <circle cx="1100" cy="80" r="150" fill="none" stroke="#7C5CFF" stroke-width="1" stroke-opacity="0.15"/>
+  <!-- Logo bar -->
+  <rect x="80" y="80" width="3" height="24" fill="#7C5CFF"/>
+  <text x="95" y="100" font-family="Inter, sans-serif" font-size="14" font-weight="700" letter-spacing="0.12em" fill="white" text-transform="uppercase">ELEWARE AI</text>
+  <!-- Divider -->
+  <rect x="80" y="160" width="1040" height="1" fill="white" fill-opacity="0.06"/>
+  <!-- Headline -->
+  <text x="80" y="290" font-family="Inter, sans-serif" font-size="72" font-weight="700" fill="white" letter-spacing="-0.02em">Your calendar.</text>
+  <text x="80" y="390" font-family="Inter, sans-serif" font-size="72" font-weight="700" letter-spacing="-0.02em">
+    <tspan fill="#7C5CFF">Full of qualified calls.</tspan>
+  </text>
+  <!-- Divider -->
+  <rect x="80" y="430" width="1040" height="1" fill="white" fill-opacity="0.06"/>
+  <!-- Subhead -->
+  <text x="80" y="475" font-family="Inter, sans-serif" font-size="20" fill="#C4C4D0">20+ qualified calls in 50 days. Or we work free.</text>
+  <!-- Stats -->
+  <rect x="80" y="510" width="3" height="60" fill="#7C5CFF"/>
+  <text x="95" y="535" font-family="Inter, sans-serif" font-size="28" font-weight="700" fill="#8B7AFF">20+</text>
+  <text x="95" y="558" font-family="Inter, sans-serif" font-size="13" fill="#6B6B7B">qualified calls</text>
+  <rect x="300" y="510" width="3" height="60" fill="#7C5CFF"/>
+  <text x="315" y="535" font-family="Inter, sans-serif" font-size="28" font-weight="700" fill="#8B7AFF">50 days</text>
+  <text x="315" y="558" font-family="Inter, sans-serif" font-size="13" fill="#6B6B7B">guaranteed</text>
+  <rect x="540" y="510" width="3" height="60" fill="#7C5CFF"/>
+  <text x="555" y="535" font-family="Inter, sans-serif" font-size="28" font-weight="700" fill="#8B7AFF">6mo+</text>
+  <text x="555" y="558" font-family="Inter, sans-serif" font-size="13" fill="#6B6B7B">avg retention</text>
+</svg>

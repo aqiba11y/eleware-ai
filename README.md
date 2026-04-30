@@ -1,36 +1,126 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Eleware AI — Landing Page
 
-## Getting Started
+Production-ready landing page for **Eleware AI**, a done-for-you LinkedIn appointment setting agency. Single conversion goal: get visitors to book a free 20-minute discovery call via Calendly.
 
-First, run the development server:
+---
+
+## Tech Stack
+
+| Tool | Version | Purpose |
+|---|---|---|
+| Next.js | 14 (App Router) | Framework |
+| TypeScript | 5 (strict) | Type safety |
+| Tailwind CSS | 3 | Styling |
+| Framer Motion | 12 | Animations |
+| Lucide React | latest | Icons |
+| CVA | 0.7 | Button variants |
+| clsx + tailwind-merge | latest | Class utilities |
+| Prettier + ESLint | 3 / 8 | Code quality |
+
+---
+
+## Setup
 
 ```bash
+# Requires Node.js 20+
+
+cd eleware-ai
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# → http://localhost:3000
+
+# Production build
+npm run build && npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+No environment variables required.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## How to Update Copy
 
-## Learn More
+**All copy lives in one file:** `lib/constants.ts`
 
-To learn more about Next.js, take a look at the following resources:
+Zero strings are hardcoded in components. To change any text on the site, edit the relevant constant:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```ts
+export const HERO = {
+  headlineWhite: "Your calendar.",
+  headlinePurple: "Full of qualified calls.",
+};
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+export const FAQS = [
+  { q: "How fast will I see results?", a: "..." },
+];
+```
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## How to Update the Calendly Link
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+In `lib/constants.ts`:
+
+```ts
+export const SITE = {
+  calendly: "https://calendly.com/your-new-link-here",
+};
+```
+
+Every "Book a Call" button on the site pulls from this single value.
+
+---
+
+## How to Add the Founder Photo
+
+1. Add the photo to `public/images/` as `abdullah.jpg`
+2. Recommended: square crop, minimum 840×840px, WebP or JPEG
+3. No code change needed — the path is already wired in `lib/constants.ts`
+
+Until the photo is present, a styled "AH" initials placeholder renders automatically.
+
+---
+
+## Folder Structure
+
+```
+/app
+  layout.tsx        Root layout — fonts, metadata, Calendly CSS
+  page.tsx          Page composition — all sections in order
+  globals.css       Tailwind base + CSS custom properties
+  sitemap.ts        Auto-generated sitemap
+  robots.ts         robots.txt
+
+/components
+  /sections         One file per page section (Navigation → Footer)
+  /ui               Reusable primitives (Button, Eyebrow, StatBlock, etc.)
+
+/lib
+  constants.ts      ALL copy and links — single source of truth
+  utils.ts          cn() helper
+  animations.ts     Framer Motion variants
+
+/public
+  /images           Add abdullah.jpg here for founder photo
+  og-image.svg      Open Graph preview image
+```
+
+---
+
+## Deploy to Vercel
+
+1. Push the repo to GitHub
+2. Import at vercel.com/new
+3. No environment variables needed — click Deploy
+4. Set `eleware.ai` as custom domain in Vercel project settings
+
+---
+
+## Brand System
+
+Design matches the Eleware AI PDF brand document exactly:
+
+- **Vertical purple bar** — 3px × 20px, left of every eyebrow label and logo
+- **Stat cards** — `#1A1A2E` background, 3px `#7C5CFF` left border
+- **Corner orbs** — stroke-only circles, no fill, low-opacity purple
+- **Horizontal dividers** — 1px `rgba(255,255,255,0.06)` separating content blocks
+- **Color tokens** — defined in `tailwind.config.ts` and `app/globals.css`

@@ -6,6 +6,7 @@ import { Method } from "@/components/sections/Method";
 import { WhatYouGet } from "@/components/sections/WhatYouGet";
 import { AboutFounder } from "@/components/sections/AboutFounder";
 import { ClientResult } from "@/components/sections/ClientResult";
+import { LiveResults } from "@/components/sections/LiveResults";
 import { WhoItsFor } from "@/components/sections/WhoItsFor";
 import { Guarantee } from "@/components/sections/Guarantee";
 import { FAQ } from "@/components/sections/FAQ";
@@ -24,6 +25,7 @@ export default function Home() {
         <WhatYouGet />
         <AboutFounder />
         <ClientResult />
+        <LiveResults />
         <WhoItsFor />
         <Guarantee />
         <FAQ />

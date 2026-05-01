@@ -64,6 +64,14 @@ const config: Config = {
       animation: {
         "fade-in": "fadeIn 0.6s ease forwards",
         "slide-up": "slideUp 0.6s ease forwards",
+        "spin-slow": "spin 60s linear infinite",
+        float: "float 6s ease-in-out infinite",
+        shimmer: "shimmer 8s linear infinite",
+        aurora: "aurora 20s ease infinite",
+        meteor: "meteor 5s linear infinite",
+        "moving-border": "moving-border 4s linear infinite",
+        "pulse-glow": "pulse-glow 3s ease-in-out infinite",
+        "scale-pulse": "scale-pulse 4s ease-in-out infinite",
       },
       keyframes: {
         fadeIn: {
@@ -73,6 +81,41 @@ const config: Config = {
         slideUp: {
           "0%": { opacity: "0", transform: "translateY(24px)" },
           "100%": { opacity: "1", transform: "translateY(0)" },
+        },
+        float: {
+          "0%, 100%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(-12px)" },
+        },
+        shimmer: {
+          "0%": { backgroundPosition: "200% center" },
+          "100%": { backgroundPosition: "-200% center" },
+        },
+        aurora: {
+          "0%, 100%": { backgroundPosition: "50% 50%, 50% 50%" },
+          "50%": { backgroundPosition: "350% 50%, 350% 50%" },
+        },
+        meteor: {
+          "0%": {
+            transform: "rotate(215deg) translateX(0)",
+            opacity: "1",
+          },
+          "70%": { opacity: "1" },
+          "100%": {
+            transform: "rotate(215deg) translateX(-500px)",
+            opacity: "0",
+          },
+        },
+        "moving-border": {
+          "0%": { backgroundPosition: "0% 50%" },
+          "100%": { backgroundPosition: "200% 50%" },
+        },
+        "pulse-glow": {
+          "0%, 100%": { boxShadow: "0 0 30px rgba(124, 92, 255, 0.4)" },
+          "50%": { boxShadow: "0 0 60px rgba(124, 92, 255, 0.7)" },
+        },
+        "scale-pulse": {
+          "0%, 100%": { transform: "scale(1)" },
+          "50%": { transform: "scale(1.05)" },
         },
       },
     },

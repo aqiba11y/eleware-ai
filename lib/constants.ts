@@ -139,9 +139,9 @@ export const FOUNDER = {
     "Today, we run done-for-you LinkedIn appointment setting for coaches, B2B founders, and executive consultants — and we guarantee outcomes, not effort.",
   ],
   stats: [
-    { value: "1,200+", label: "personalised connections sent" },
-    { value: "40%", label: "average acceptance rate" },
-    { value: "120+", label: "positive replies generated" },
+    { value: "2,700+", label: "personalised connections sent" },
+    { value: "32%", label: "average acceptance rate" },
+    { value: "215+", label: "positive replies generated" },
   ],
   imageSrc: "/images/abdullah.jpg",
   imageAlt: "Abdullah Hijazi, Founder of Eleware AI",
@@ -192,8 +192,62 @@ export const CLIENT_RESULT = {
   ],
 } as const;
 
-export const WHO_ITS_FOR = {
+export const LIVE_RESULTS = {
   number: "06",
+  eyebrow: "Live Results",
+  headline: "Real dashboards. Real numbers. Real clients.",
+  subhead:
+    "Anonymized snapshots from active client accounts — currently running. Names removed for privacy. Numbers untouched.",
+  aggregateStats: [
+    { value: "2,700+", label: "Connections sent across all accounts" },
+    { value: "874+", label: "Total accepted invitations" },
+    { value: "215+", label: "Positive replies generated" },
+    { value: "5+", label: "Active client accounts" },
+  ],
+  // Mixed real PNGs + SVG placeholders. dashboard-1 is the real anonymized
+  // screenshot at .png; dashboard-2 and dashboard-3 are still SVG mockups
+  // until you provide their PNGs. To replace either remaining placeholder:
+  // drop dashboard-N.png into /public/images/dashboards/ and change the
+  // "src" below from ".svg" to ".png".
+  dashboards: [
+    {
+      src: "/images/dashboards/dashboard-1.png",
+      alt: "Anonymized client dashboard — 30 day performance",
+      label: "Executive Coach",
+      duration: "30 days",
+      highlights: [
+        { value: "335", label: "invites sent" },
+        { value: "119", label: "accepted (35%)" },
+        { value: "25", label: "replies" },
+      ],
+    },
+    {
+      src: "/images/dashboards/dashboard-2.svg",
+      alt: "Anonymized client dashboard — 4 month performance",
+      label: "Leadership Consultant",
+      duration: "4 months",
+      highlights: [
+        { value: "1,235", label: "invites sent" },
+        { value: "422", label: "accepted (34%)" },
+        { value: "121", label: "replies" },
+      ],
+    },
+    {
+      src: "/images/dashboards/dashboard-3.svg",
+      alt: "Anonymized client dashboard — 30 day performance",
+      label: "B2B Founder",
+      duration: "30 days",
+      highlights: [
+        { value: "366", label: "invites sent" },
+        { value: "113", label: "accepted (31%)" },
+        { value: "25", label: "replies" },
+      ],
+    },
+  ],
+} as const;
+
+export const WHO_ITS_FOR = {
+  number: "07",
   eyebrow: "Who This Is For",
   headline: "Built for consultants who are ready to scale.",
   forYou: {
@@ -216,7 +270,7 @@ export const WHO_ITS_FOR = {
 } as const;
 
 export const GUARANTEE = {
-  number: "07",
+  number: "08",
   eyebrow: "Our Guarantee",
   headline: "20+ qualified calls in 50 days.",
   subheadline: "Or we work free until we deliver.",

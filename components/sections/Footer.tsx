@@ -1,21 +1,31 @@
+"use client";
+
+import { motion } from "framer-motion";
 import { Container } from "@/components/ui/Container";
 import { Divider } from "@/components/ui/Divider";
+import { MagneticButton } from "@/components/signature/MagneticButton";
 import { SITE, FOOTER_DATA } from "@/lib/constants";
 
 export function Footer() {
   return (
-    <footer className="bg-[#0E0E1A] pb-8 pt-16">
+    <motion.footer
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-50px" }}
+      transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+      className="bg-[#0E0E1A] pb-8 pt-16"
+    >
       <Container>
         <Divider className="mb-12" />
 
         {/* Main row */}
         <div className="flex flex-col gap-10 md:flex-row md:items-start md:justify-between">
-          {/* Logo + tagline */}
+          {/* Logo with pulse-glow on the bar */}
           <div className="flex flex-col gap-3">
             <a href="#top" className="group flex items-center gap-3">
               <span
                 aria-hidden="true"
-                className="h-5 w-[3px] flex-shrink-0 bg-[#7C5CFF]"
+                className="h-5 w-[3px] flex-shrink-0 bg-[#7C5CFF] animate-pulse-glow"
               />
               <span className="text-sm font-bold uppercase tracking-[0.12em] text-white transition-opacity group-hover:opacity-80">
                 {SITE.name}
@@ -26,14 +36,14 @@ export function Footer() {
             </p>
           </div>
 
-          {/* Nav links */}
+          {/* Nav links with underline-on-hover */}
           <nav aria-label="Footer navigation">
             <ul className="flex flex-wrap gap-6 md:gap-8" role="list">
               {FOOTER_DATA.links.map((link) => (
                 <li key={link.href}>
                   <a
                     href={link.href}
-                    className="text-[14px] text-[#6B6B7B] transition-colors hover:text-white"
+                    className="link-underline text-[14px] text-[#6B6B7B] transition-colors hover:text-white"
                   >
                     {link.label}
                   </a>
@@ -42,21 +52,29 @@ export function Footer() {
             </ul>
           </nav>
 
-          {/* Social */}
+          {/* Social — magnetic + color shift */}
           <div className="flex items-center gap-4">
-            <a
-              href={SITE.linkedin}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-[#6B6B7B] transition-colors hover:text-[#7C5CFF]"
-              aria-label="Eleware AI on LinkedIn"
-            >
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
-                <rect x="2" y="9" width="4" height="12"/>
-                <circle cx="4" cy="4" r="2"/>
-              </svg>
-            </a>
+            <MagneticButton strength={4}>
+              <a
+                href={SITE.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#6B6B7B] transition-colors duration-300 hover:text-[#7C5CFF]"
+                aria-label="Eleware AI on LinkedIn"
+              >
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                  <rect x="2" y="9" width="4" height="12" />
+                  <circle cx="4" cy="4" r="2" />
+                </svg>
+              </a>
+            </MagneticButton>
           </div>
         </div>
 
@@ -68,6 +86,6 @@ export function Footer() {
           <p>{FOOTER_DATA.attribution}</p>
         </div>
       </Container>
-    </footer>
+    </motion.footer>
   );
 }

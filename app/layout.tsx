@@ -2,6 +2,10 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
+import { SmoothScrollProvider } from "@/components/providers/SmoothScrollProvider";
+import { NoiseTexture } from "@/components/signature/NoiseTexture";
+import { CustomCursor } from "@/components/CustomCursor";
+import { PageTransition } from "@/components/PageTransition";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -57,7 +61,10 @@ export default function RootLayout({
         <a href="#main-content" className="skip-link">
           Skip to main content
         </a>
-        {children}
+        <PageTransition />
+        <NoiseTexture opacity={0.035} />
+        <CustomCursor />
+        <SmoothScrollProvider>{children}</SmoothScrollProvider>
       </body>
     </html>
   );

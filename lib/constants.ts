@@ -143,7 +143,7 @@ export const FOUNDER = {
     { value: "32%", label: "average acceptance rate" },
     { value: "215+", label: "positive replies generated" },
   ],
-  imageSrc: "/images/abdullah.jpg",
+  imageSrc: "/images/abdullah.png",
   imageAlt: "Abdullah Hijazi, Founder of Eleware AI",
 } as const;
 

@@ -38,11 +38,20 @@ export const PROBLEM = {
   eyebrow: "The Problem",
   headline: "Your pipeline is inconsistent. Not your service.",
   body: [
-    "You're exceptional at what you do — but chasing leads wastes your best hours.",
-    "You post, you reach out, you follow up — but the pipeline stays unpredictable.",
-    "Every week without a booked call is revenue you'll never get back.",
+    {
+      bold: "You're exceptional at what you do,",
+      rest: "but chasing leads wastes your best hours.",
+    },
+    {
+      bold: "You post, you reach out, you follow up,",
+      rest: "but the pipeline stays unpredictable.",
+    },
+    {
+      bold: "Every week without a booked call is revenue you'll never get back.",
+      rest: "",
+    },
   ],
-  stat: { value: "1–3%", label: "avg booked-call rate, cold outreach" },
+  stat: { value: "1-3%", label: "avg booked-call rate, cold outreach" },
 } as const;
 
 export const WHAT_WE_DO = {
@@ -50,7 +59,7 @@ export const WHAT_WE_DO = {
   eyebrow: "What We Do",
   headline: "We run it. You show up to the call.",
   subhead:
-    "Every part of your LinkedIn system — managed end-to-end by our team.",
+    "Every part of your LinkedIn system, managed end-to-end by our team.",
   services: [
     "LinkedIn profile optimised for executive-level credibility",
     "Ideal client targeting & Dream 20 prospect list built monthly",
@@ -64,7 +73,7 @@ export const WHAT_WE_DO = {
 export const METHOD = {
   number: "03",
   eyebrow: "Our Method",
-  headline: "We don't pitch. We build trust — one gate at a time.",
+  headline: "We don't pitch. We build trust, one gate at a time.",
   gates: [
     {
       id: "G1",
@@ -90,7 +99,7 @@ export const METHOD = {
     {
       id: "G5",
       title: "Offer",
-      description: "We present your service — framed around their outcome.",
+      description: "We present your service, framed around their outcome.",
     },
     {
       id: "G6",
@@ -111,15 +120,15 @@ export const WHAT_YOU_GET = {
     },
     {
       milestone: "Month 1",
-      description: "4–6 qualified calls booked — pipeline building",
+      description: "4-6 qualified calls booked. Pipeline building.",
     },
     {
       milestone: "Month 2",
-      description: "8–12 qualified calls per month, consistently",
+      description: "8-12 qualified calls per month, consistently",
     },
     {
       milestone: "Month 3+",
-      description: "Predictable, scalable lead flow — ready to grow",
+      description: "Predictable, scalable lead flow. Ready to grow.",
     },
   ],
   stats: [
@@ -136,7 +145,7 @@ export const FOUNDER = {
   bio: [
     "I started Eleware AI because I was tired of seeing world-class consultants struggle with inconsistent pipelines while doing world-class work.",
     "While running outreach across multiple US-based client accounts, I saw the same pattern: great service, terrible pipeline. So I built the system I wished existed.",
-    "Today, we run done-for-you LinkedIn appointment setting for coaches, B2B founders, and executive consultants — and we guarantee outcomes, not effort.",
+    "Today, we run done-for-you LinkedIn appointment setting for coaches, B2B founders, and executive consultants. We guarantee outcomes, not effort.",
   ],
   stats: [
     { value: "2,700+", label: "personalised connections sent" },
@@ -159,9 +168,9 @@ export const CLIENT_RESULT = {
   problems: {
     title: "The Problem",
     items: [
-      "Profile not optimised — low acceptance rate",
+      "Profile not optimised, low acceptance rate",
       "Weak positioning, generic openers",
-      "Reaching wrong people — wrong price point",
+      "Reaching wrong people, wrong price point",
       "Couldn't convert DMs into booked calls",
     ],
   },
@@ -169,21 +178,21 @@ export const CLIENT_RESULT = {
     title: "What We Did",
     items: [
       "Full profile audit & rewrite",
-      "Rebuilt ICP — right prospects, right price",
-      "Rewrote openers — personal, not salesy",
+      "Rebuilt ICP. Right prospects, right price.",
+      "Rewrote openers. Personal, not salesy.",
       "DM tone trained to build trust first",
     ],
   },
   testimonials: [
     {
-      quote: "Placeholder testimonial — replace with real quote.",
+      quote: "Placeholder testimonial. Replace with real quote.",
       name: "Client Name",
       role: "Role",
       company: "Company",
       metric: "Specific result",
     },
     {
-      quote: "Placeholder testimonial — replace with real quote.",
+      quote: "Placeholder testimonial. Replace with real quote.",
       name: "Client Name",
       role: "Role",
       company: "Company",
@@ -197,7 +206,7 @@ export const LIVE_RESULTS = {
   eyebrow: "Live Results",
   headline: "Real dashboards. Real numbers. Real clients.",
   subhead:
-    "Anonymized snapshots from active client accounts — currently running. Names removed for privacy. Numbers untouched.",
+    "Anonymized snapshots from active client accounts, currently running. Names removed for privacy. Numbers untouched.",
   aggregateStats: [
     { value: "2,700+", label: "Connections sent across all accounts" },
     { value: "874+", label: "Total accepted invitations" },
@@ -212,7 +221,7 @@ export const LIVE_RESULTS = {
   dashboards: [
     {
       src: "/images/dashboards/dashboard-1.png",
-      alt: "Anonymized client dashboard — 30 day performance",
+      alt: "Anonymized client dashboard, 30 day performance",
       label: "Executive Coach",
       duration: "30 days",
       highlights: [
@@ -223,7 +232,7 @@ export const LIVE_RESULTS = {
     },
     {
       src: "/images/dashboards/dashboard-2.svg",
-      alt: "Anonymized client dashboard — 4 month performance",
+      alt: "Anonymized client dashboard, 4 month performance",
       label: "Leadership Consultant",
       duration: "4 months",
       highlights: [
@@ -234,7 +243,7 @@ export const LIVE_RESULTS = {
     },
     {
       src: "/images/dashboards/dashboard-3.svg",
-      alt: "Anonymized client dashboard — 30 day performance",
+      alt: "Anonymized client dashboard, 30 day performance",
       label: "B2B Founder",
       duration: "30 days",
       highlights: [
@@ -254,7 +263,7 @@ export const WHO_ITS_FOR = {
     title: "For You",
     items: [
       "Executive or leadership consultant with a $3,000+ offer",
-      "Already getting results — pipeline is just inconsistent",
+      "Already getting results. Pipeline is just inconsistent.",
       "Done with generic outreach that damages your brand",
       "Want qualified calls without building a sales team",
     ],
@@ -294,7 +303,7 @@ export const FAQS = [
   },
   {
     q: "What if you don't deliver?",
-    a: "If we don't book 20+ qualified calls in 50 days, we keep working — at no extra cost — until we do.",
+    a: "If we don't book 20+ qualified calls in 50 days, we keep working at no extra cost, until we do.",
   },
   {
     q: "Who handles the actual conversations?",
@@ -318,7 +327,7 @@ export const FINAL_CTA = {
   eyebrow: "Ready?",
   headline: "Let's fill your calendar.",
   subhead: "Book a free 20-minute discovery call.",
-  body: "No pitch — just clarity on what's blocking your pipeline and whether we're the right fit.",
+  body: "No pitch. Just clarity on what's blocking your pipeline and whether we're the right fit.",
   cta: "Book your free call",
   calendlyDisplay: "calendly.com/abdullahhijazi69/discovery-call-eleware-ai",
 } as const;

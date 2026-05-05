@@ -105,7 +105,7 @@ export function GateProgressionFlow({
                 onMouseLeave={() => setHoveredGate(null)}
                 onFocus={() => setHoveredGate(i)}
                 onBlur={() => setHoveredGate(null)}
-                aria-label={`${gate.id}: ${gate.title} — ${gate.description}`}
+                aria-label={`${gate.id}: ${gate.title}. ${gate.description}`}
                 className="absolute top-1/2 -translate-x-1/2 -translate-y-1/2 cursor-default focus:outline-none"
                 style={{ left }}
               >

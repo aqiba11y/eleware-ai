@@ -60,35 +60,32 @@ export function Problem() {
 
             {/* 3 body bullets, each in a card spotlight */}
             <div className="flex flex-col gap-3">
-              {PROBLEM.body.map((line, i) => {
-                const [bold, rest] = line.split(" — ");
-                return (
-                  <motion.div
-                    key={i}
-                    variants={reduce ? {} : fadeInUp}
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={viewportConfig}
-                    transition={{ delay: i * 0.12 }}
-                  >
-                    <CardSpotlight className="px-6 py-5">
-                      <div className="flex items-start gap-5">
-                        <span
-                          aria-hidden="true"
-                          className="mt-1.5 h-4 w-4 flex-shrink-0 rounded-full bg-[#7C5CFF] animate-scale-pulse"
-                          style={{ animationDelay: `${i * 0.4}s` }}
-                        />
-                        <p className="text-[17px] leading-[1.6] text-[#C4C4D0]">
-                          <strong className="font-semibold text-white">
-                            {bold}
-                          </strong>
-                          {rest ? ` — ${rest}` : ""}
-                        </p>
-                      </div>
-                    </CardSpotlight>
-                  </motion.div>
-                );
-              })}
+              {PROBLEM.body.map((item, i) => (
+                <motion.div
+                  key={i}
+                  variants={reduce ? {} : fadeInUp}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={viewportConfig}
+                  transition={{ delay: i * 0.12 }}
+                >
+                  <CardSpotlight className="px-6 py-5">
+                    <div className="flex items-start gap-5">
+                      <span
+                        aria-hidden="true"
+                        className="mt-1.5 h-4 w-4 flex-shrink-0 rounded-full bg-[#7C5CFF] animate-scale-pulse"
+                        style={{ animationDelay: `${i * 0.4}s` }}
+                      />
+                      <p className="text-[17px] leading-[1.6] text-[#C4C4D0]">
+                        <strong className="font-semibold text-white">
+                          {item.bold}
+                        </strong>
+                        {item.rest ? ` ${item.rest}` : ""}
+                      </p>
+                    </div>
+                  </CardSpotlight>
+                </motion.div>
+              ))}
             </div>
           </div>
 

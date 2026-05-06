@@ -85,6 +85,20 @@ export function Footer() {
           <p>{FOOTER_DATA.copyright}</p>
           <p>{FOOTER_DATA.attribution}</p>
         </div>
+
+        {/* Developer credit */}
+        <p className="mt-3 text-center text-[11px] text-[#6B6B7B]/70 md:text-right">
+          Built by{" "}
+          <a
+            href={SITE.developer.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="link-underline text-[#6B6B7B] transition-colors hover:text-[#7C5CFF]"
+            aria-label="Aqib Saleem on LinkedIn"
+          >
+            {SITE.developer.name}
+          </a>
+        </p>
       </Container>
     </motion.footer>
   );

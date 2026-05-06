@@ -9,6 +9,10 @@ export const SITE = {
     role: "Founder, Eleware AI",
     location: "Islamabad, Pakistan",
   },
+  developer: {
+    name: "Aqib Saleem",
+    linkedin: "https://www.linkedin.com/in/aqib-saleem-5106a8327/",
+  },
 } as const;
 
 export const NAV_LINKS = [

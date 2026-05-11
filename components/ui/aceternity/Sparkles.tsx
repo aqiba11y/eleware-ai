@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, type ReactNode } from "react";
+import { useEffect, useState, type ReactNode } from "react";
 import { cn } from "@/lib/utils";
 
 interface SparklesProps {
@@ -10,14 +10,30 @@ interface SparklesProps {
   colors?: string[];
 }
 
+interface Particle {
+  left: string;
+  top: string;
+  size: number;
+  color: string;
+  delay: number;
+  duration: number;
+  key: number;
+}
+
+const DEFAULT_COLORS = ["#7C5CFF", "#8B7AFF", "#FFFFFF"];
+
 export function Sparkles({
   className,
   children,
   count = 12,
-  colors = ["#7C5CFF", "#8B7AFF", "#FFFFFF"],
+  colors = DEFAULT_COLORS,
 }: SparklesProps) {
-  const particles = useMemo(
-    () =>
+  // SSR renders no particles; client fills them in after mount to avoid
+  // Math.random() hydration mismatch.
+  const [particles, setParticles] = useState<Particle[]>([]);
+
+  useEffect(() => {
+    setParticles(
       Array.from({ length: count }, (_, i) => ({
         left: `${Math.random() * 100}%`,
         top: `${Math.random() * 100}%`,
@@ -27,8 +43,8 @@ export function Sparkles({
         duration: 2 + Math.random() * 3,
         key: i,
       })),
-    [count, colors],
-  );
+    );
+  }, [count, colors]);
 
   return (
     <span className={cn("relative inline-block", className)}>

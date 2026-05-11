@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo } from "react";
+import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 
 interface MeteorEffectProps {
@@ -8,9 +8,21 @@ interface MeteorEffectProps {
   className?: string;
 }
 
+interface Meteor {
+  top: string;
+  left: string;
+  delay: string;
+  duration: string;
+  key: number;
+}
+
 export function MeteorEffect({ number = 5, className }: MeteorEffectProps) {
-  const meteors = useMemo(
-    () =>
+  // SSR renders zero meteors; client populates after mount to avoid
+  // Math.random() hydration mismatch.
+  const [meteors, setMeteors] = useState<Meteor[]>([]);
+
+  useEffect(() => {
+    setMeteors(
       Array.from({ length: number }, (_, i) => ({
         top: `${Math.floor(Math.random() * 60) - 10}%`,
         left: `${Math.floor(Math.random() * 100)}%`,
@@ -18,8 +30,8 @@ export function MeteorEffect({ number = 5, className }: MeteorEffectProps) {
         duration: `${(5 + Math.random() * 5).toFixed(2)}s`,
         key: i,
       })),
-    [number],
-  );
+    );
+  }, [number]);
 
   return (
     <div

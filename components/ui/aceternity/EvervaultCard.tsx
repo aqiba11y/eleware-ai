@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
-import { useRef, useState, type ReactNode } from "react";
+import { useEffect, useRef, useState, type ReactNode } from "react";
 import { cn } from "@/lib/utils";
 
 interface EvervaultCardProps {
@@ -29,7 +29,14 @@ export function EvervaultCard({
   const ref = useRef<HTMLDivElement>(null);
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
-  const [randomString, setRandomString] = useState(() => generateNoise(1500));
+
+  // Initial render shows empty string so SSR and client match; we populate
+  // the noise after mount, avoiding Math.random() hydration mismatch.
+  const [randomString, setRandomString] = useState("");
+
+  useEffect(() => {
+    setRandomString(generateNoise(1500));
+  }, []);
 
   const onMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     const rect = ref.current?.getBoundingClientRect();

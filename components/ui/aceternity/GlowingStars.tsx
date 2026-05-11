@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo } from "react";
+import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 
 interface GlowingStarsProps {
@@ -8,9 +8,22 @@ interface GlowingStarsProps {
   count?: number;
 }
 
+interface Star {
+  top: string;
+  left: string;
+  size: number;
+  delay: number;
+  duration: number;
+  key: number;
+}
+
 export function GlowingStars({ className, count = 4 }: GlowingStarsProps) {
-  const stars = useMemo(
-    () =>
+  // SSR renders no stars; client fills them in after mount to avoid
+  // Math.random() hydration mismatch.
+  const [stars, setStars] = useState<Star[]>([]);
+
+  useEffect(() => {
+    setStars(
       Array.from({ length: count }, (_, i) => ({
         top: `${Math.random() * 100}%`,
         left: `${Math.random() * 100}%`,
@@ -19,8 +32,8 @@ export function GlowingStars({ className, count = 4 }: GlowingStarsProps) {
         duration: 3 + Math.random() * 2,
         key: i,
       })),
-    [count],
-  );
+    );
+  }, [count]);
 
   return (
     <div

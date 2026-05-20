@@ -22,7 +22,7 @@ import {
 } from "@/lib/animations";
 
 // Render the headline with the last word in gradient (matches spec).
-function HeadlineSplit({ text, reduce }: { text: string; reduce: boolean | null }) {
+function HeadlineSplit({ text }: { text: string }) {
   const words = text.trim().replace(/\.$/, "").split(" ");
   const last = words.pop() ?? "";
   const head = words.join(" ");
@@ -108,7 +108,7 @@ export function FinalCTA() {
             variants={reduce ? {} : staggerItem}
             className="mb-6 font-heading text-[48px] font-bold leading-[1.0] tracking-[-0.03em] text-white md:text-[72px] lg:text-[96px]"
           >
-            <HeadlineSplit text={FINAL_CTA.headline} reduce={reduce} />
+            <HeadlineSplit text={FINAL_CTA.headline} />
           </motion.h2>
 
           <Divider className="mb-8 w-full max-w-md" />

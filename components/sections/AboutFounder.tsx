@@ -13,7 +13,6 @@ import { Section } from "@/components/ui/Section";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Divider } from "@/components/ui/Divider";
 import { BackgroundGradient } from "@/components/ui/aceternity/BackgroundGradient";
-import { GlowingStars } from "@/components/ui/aceternity/GlowingStars";
 import { NumberTicker } from "@/components/ui/aceternity/NumberTicker";
 import { TextGenerateEffect } from "@/components/ui/aceternity/TextGenerateEffect";
 import { MagneticButton } from "@/components/signature/MagneticButton";
@@ -126,8 +125,6 @@ export function AboutFounder() {
                 </div>
               </BackgroundGradient>
 
-              {/* Glowing stars around photo */}
-              <GlowingStars count={4} className="-inset-3" />
             </motion.div>
 
             {/* Purple glow under image */}

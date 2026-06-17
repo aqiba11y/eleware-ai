@@ -38,6 +38,7 @@ export function VisitNotifier() {
         access_key: WEB3FORMS_KEY,
         subject: "New visit to elewareai.com",
         from_name: "Eleware AI Site",
+        cc: ["abdullahhijazi69@gmail.com"],
         message:
           `Someone just visited your website.\n\n` +
           `Time: ${now}\n` +

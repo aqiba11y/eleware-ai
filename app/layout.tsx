@@ -8,6 +8,7 @@ import { CustomCursor } from "@/components/CustomCursor";
 import { PageTransition } from "@/components/PageTransition";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { VisitNotifier } from "@/components/VisitNotifier";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -69,6 +70,7 @@ export default function RootLayout({
         <SmoothScrollProvider>{children}</SmoothScrollProvider>
         <Analytics />
         <SpeedInsights />
+        <VisitNotifier />
       </body>
     </html>
   );

@@ -49,9 +49,9 @@ export function Navigation() {
           <a href="#top" className="group flex items-center gap-3">
             <span
               aria-hidden="true"
-              className="h-5 w-[3px] flex-shrink-0 bg-[#7C5CFF] animate-pulse-glow"
+              className="h-7 w-[4px] flex-shrink-0 bg-[#7C5CFF] animate-pulse-glow md:h-8"
             />
-            <span className="text-sm font-bold uppercase tracking-[0.12em] text-white transition-opacity group-hover:opacity-80">
+            <span className="text-lg font-bold uppercase tracking-[0.12em] text-white transition-opacity group-hover:opacity-80 md:text-2xl">
               {SITE.name}
             </span>
           </a>

@@ -27,11 +27,11 @@ export const metadata: Metadata = {
   title: "Eleware AI | 20+ Qualified LinkedIn Calls in 50 Days",
   description:
     "Done-for-you LinkedIn appointment setting for executive consultants, coaches, and B2B founders. We book qualified calls. You close them. Guarantee: 20+ calls in 50 days, or we work free.",
-  metadataBase: new URL("https://eleware.ai"),
+  metadataBase: new URL("https://elewareai.com"),
   openGraph: {
     title: "Eleware AI | Done-for-you LinkedIn Appointment Setting",
     description: "20+ qualified calls in 50 days. Or we work free.",
-    url: "https://eleware.ai",
+    url: "https://elewareai.com",
     siteName: "Eleware AI",
     images: [{ url: "/og-image.jpg", width: 1200, height: 630 }],
     locale: "en_US",

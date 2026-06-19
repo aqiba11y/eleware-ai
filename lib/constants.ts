@@ -1,7 +1,7 @@
 export const SITE = {
   name: "Eleware AI",
   tagline: "Turning LinkedIn into a predictable pipeline.",
-  url: "https://eleware.ai",
+  url: "https://elewareai.com",
   calendly: "https://calendly.com/abdullahhijazi69/discovery-call-eleware-ai",
   linkedin: "https://www.linkedin.com/in/abdullah-hijazi-836143260/",
   founder: {
@@ -345,5 +345,5 @@ export const FOOTER_DATA = {
     { label: "FAQ", href: "#faq" },
   ],
   copyright: `© ${new Date().getFullYear()} Eleware AI. All rights reserved.`,
-  attribution: "eleware.ai · Abdullah Hijazi · Founder",
+  attribution: "elewareai.com · Abdullah Hijazi · Founder",
 } as const;

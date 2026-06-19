@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://eleware.ai/sitemap.xml",
+    sitemap: "https://elewareai.com/sitemap.xml",
   };
 }

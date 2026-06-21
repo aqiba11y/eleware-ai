@@ -32,18 +32,6 @@ export function WhoItsFor() {
           initial="hidden"
           whileInView="visible"
           viewport={viewportConfig}
-          className="mb-4"
-        >
-          <span className="text-[13px] font-medium text-[#6B6B7B]">
-            {WHO_ITS_FOR.number}
-          </span>
-        </motion.div>
-
-        <motion.div
-          variants={reduce ? {} : fadeInUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={viewportConfig}
           className="mb-8"
         >
           <Eyebrow>{WHO_ITS_FOR.eyebrow}</Eyebrow>
@@ -155,11 +143,6 @@ export function WhoItsFor() {
           </motion.div>
         </div>
 
-        <div className="mt-8 flex justify-end">
-          <span className="text-[13px] font-medium text-[#6B6B7B]">
-            {WHO_ITS_FOR.number}
-          </span>
-        </div>
       </Container>
     </Section>
   );

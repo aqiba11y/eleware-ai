@@ -27,18 +27,6 @@ export function Problem() {
               initial="hidden"
               whileInView="visible"
               viewport={viewportConfig}
-              className="mb-3"
-            >
-              <span className="text-[13px] font-medium text-[#6B6B7B]">
-                {PROBLEM.number}
-              </span>
-            </motion.div>
-
-            <motion.div
-              variants={reduce ? {} : fadeInUp}
-              initial="hidden"
-              whileInView="visible"
-              viewport={viewportConfig}
               className="mb-8"
             >
               <Eyebrow>{PROBLEM.eyebrow}</Eyebrow>
@@ -112,11 +100,6 @@ export function Problem() {
           </motion.div>
         </div>
 
-        <div className="mt-16 flex justify-end">
-          <span className="text-[13px] font-medium text-[#6B6B7B]">
-            {PROBLEM.number}
-          </span>
-        </div>
       </Container>
     </Section>
   );

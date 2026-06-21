@@ -45,18 +45,6 @@ export function LiveResults() {
 
       <Container>
         {/* Section number */}
-        <motion.div
-          variants={reduce ? {} : fadeInUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={viewportConfig}
-          className="mb-4"
-        >
-          <span className="text-[13px] font-medium text-[#6B6B7B]">
-            {LIVE_RESULTS.number}
-          </span>
-        </motion.div>
-
         {/* Eyebrow */}
         <motion.div
           variants={reduce ? {} : fadeInUp}
@@ -132,12 +120,6 @@ export function LiveResults() {
           <DashboardStack />
         </motion.div>
 
-        {/* Closing number */}
-        <div className="mt-12 flex justify-end">
-          <span className="text-[13px] font-medium text-[#6B6B7B]">
-            {LIVE_RESULTS.number}
-          </span>
-        </div>
       </Container>
     </Section>
   );

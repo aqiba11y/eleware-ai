@@ -29,18 +29,6 @@ export function WhatWeDo() {
           initial="hidden"
           whileInView="visible"
           viewport={viewportConfig}
-          className="mb-4"
-        >
-          <span className="text-[13px] font-medium text-[#6B6B7B]">
-            {WHAT_WE_DO.number}
-          </span>
-        </motion.div>
-
-        <motion.div
-          variants={reduce ? {} : fadeInUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={viewportConfig}
           className="mb-8"
         >
           <Eyebrow>{WHAT_WE_DO.eyebrow}</Eyebrow>
@@ -94,11 +82,6 @@ export function WhatWeDo() {
           ))}
         </motion.div>
 
-        <div className="mt-12 flex justify-end">
-          <span className="text-[13px] font-medium text-[#6B6B7B]">
-            {WHAT_WE_DO.number}
-          </span>
-        </div>
       </Container>
     </Section>
   );

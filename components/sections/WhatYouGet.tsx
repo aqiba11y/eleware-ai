@@ -38,18 +38,6 @@ export function WhatYouGet() {
           initial="hidden"
           whileInView="visible"
           viewport={viewportConfig}
-          className="mb-4"
-        >
-          <span className="text-[13px] font-medium text-[#6B6B7B]">
-            {WHAT_YOU_GET.number}
-          </span>
-        </motion.div>
-
-        <motion.div
-          variants={reduce ? {} : fadeInUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={viewportConfig}
           className="mb-8"
         >
           <Eyebrow>{WHAT_YOU_GET.eyebrow}</Eyebrow>
@@ -142,11 +130,6 @@ export function WhatYouGet() {
           </motion.div>
         </div>
 
-        <div className="mt-12 flex justify-end">
-          <span className="text-[13px] font-medium text-[#6B6B7B]">
-            {WHAT_YOU_GET.number}
-          </span>
-        </div>
       </Container>
     </Section>
   );

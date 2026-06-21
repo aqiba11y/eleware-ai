@@ -42,18 +42,6 @@ export function ClientResult() {
           initial="hidden"
           whileInView="visible"
           viewport={viewportConfig}
-          className="mb-4"
-        >
-          <span className="text-[13px] font-medium text-[#6B6B7B]">
-            {CLIENT_RESULT.number}
-          </span>
-        </motion.div>
-
-        <motion.div
-          variants={reduce ? {} : fadeInUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={viewportConfig}
           className="mb-8"
         >
           <Eyebrow>{CLIENT_RESULT.eyebrow}</Eyebrow>
@@ -224,11 +212,6 @@ export function ClientResult() {
           ))}
         </motion.div>
 
-        <div className="mt-8 flex justify-end">
-          <span className="text-[13px] font-medium text-[#6B6B7B]">
-            {CLIENT_RESULT.number}
-          </span>
-        </div>
       </Container>
     </Section>
   );

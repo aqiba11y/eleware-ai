@@ -2,7 +2,7 @@ export const SITE = {
   name: "Eleware AI",
   tagline: "Turning LinkedIn into a predictable pipeline.",
   url: "https://elewareai.com",
-  calendly: "https://calendly.com/abdullahhijazi69/discovery-call-eleware-ai",
+  calendly: "https://calendly.com/abdullah-elewareai/30min",
   linkedin: "https://www.linkedin.com/in/abdullah-hijazi-836143260/",
   founder: {
     name: "Abdullah Hijazi",
@@ -333,7 +333,7 @@ export const FINAL_CTA = {
   subhead: "Book a free 20-minute discovery call.",
   body: "No pitch. Just clarity on what's blocking your pipeline and whether we're the right fit.",
   cta: "Book your free call",
-  calendlyDisplay: "calendly.com/abdullahhijazi69/discovery-call-eleware-ai",
+  calendlyDisplay: "calendly.com/abdullah-elewareai/30min",
 } as const;
 
 export const FOOTER_DATA = {

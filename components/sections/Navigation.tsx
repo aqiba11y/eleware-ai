@@ -36,7 +36,7 @@ export function Navigation() {
       className={cn(
         "fixed left-0 right-0 top-0 z-50 transition-all duration-500",
         scrolled
-          ? "border-b border-[rgba(124,92,255,0.12)] bg-black/60 backdrop-blur-xl"
+          ? "border-b border-[rgba(124,92,255,0.12)] bg-[#0E0E1A]/70 shadow-[0_10px_40px_-12px_rgba(0,0,0,0.65)] backdrop-blur-xl"
           : "border-b border-transparent bg-transparent",
       )}
     >
@@ -49,7 +49,7 @@ export function Navigation() {
           <a href="#top" className="group flex items-center gap-3">
             <span
               aria-hidden="true"
-              className="h-7 w-[4px] flex-shrink-0 bg-[#7C5CFF] animate-pulse-glow md:h-8"
+              className="h-7 w-[4px] flex-shrink-0 rounded-full bg-gradient-to-b from-[#8B7AFF] to-[#5B3FE0] animate-pulse-glow md:h-8"
             />
             <span className="text-lg font-bold uppercase tracking-[0.12em] text-white transition-opacity group-hover:opacity-80 md:text-2xl">
               {SITE.name}

@@ -41,6 +41,17 @@ export function Hero() {
       <GridBackground className="z-0" cellSize={48} opacity={0.06} />
       <CornerOrbs position="top-right" size={380} />
 
+      {/* Stage light behind the headline */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute -left-[15%] top-[5%] z-0 h-[480px] w-[720px] rounded-full opacity-70"
+        style={{
+          background:
+            "radial-gradient(ellipse, rgba(124,92,255,0.14) 0%, rgba(91,63,224,0.05) 45%, transparent 70%)",
+          filter: "blur(48px)",
+        }}
+      />
+
       <Container className="relative z-10">
         <Divider className="mb-10" />
 
@@ -192,7 +203,7 @@ export function Hero() {
                         visible: { opacity: 1, y: 0 },
                       }
                 }
-                className="group relative flex-1 border-l-[3px] border-[#7C5CFF] bg-[#1A1A2E] px-7 py-6 transition-transform duration-300 hover:-translate-y-1 hover:shadow-glow-purple-sm"
+                className="group relative flex-1 rounded-r-xl border-l-[3px] border-[#7C5CFF] bg-[#1A1A2E] px-7 py-6 transition-all duration-300 hover:-translate-y-1 hover:bg-[#1E1E35] hover:shadow-glow-purple-sm"
               >
                 <p className="font-heading text-[42px] font-bold leading-none tracking-tight text-[#8B7AFF] md:text-[52px]">
                   <NumberTicker

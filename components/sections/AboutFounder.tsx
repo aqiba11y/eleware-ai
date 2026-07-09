@@ -186,7 +186,7 @@ export function AboutFounder() {
                 return (
                   <div
                     key={stat.label}
-                    className="group relative flex-1 border-l-[3px] border-[#7C5CFF] bg-[#1A1A2E] px-5 py-4"
+                    className="group relative flex-1 rounded-r-xl border-l-[3px] border-[#7C5CFF] bg-[#1A1A2E] px-5 py-4 transition-all duration-300 hover:-translate-y-1 hover:bg-[#1E1E35] hover:shadow-glow-purple-sm"
                   >
                     <p className="font-heading text-[32px] font-bold leading-none tracking-tight text-[#8B7AFF]">
                       {t.isRange ? (

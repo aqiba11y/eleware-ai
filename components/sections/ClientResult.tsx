@@ -72,7 +72,7 @@ export function ClientResult() {
                 <motion.div
                   key={stat.label}
                   variants={reduce ? {} : staggerItem}
-                  className="relative mb-px border-l-[3px] border-[#7C5CFF] bg-[#1A1A2E] px-7 py-6"
+                  className="relative mb-px rounded-r-xl border-l-[3px] border-[#7C5CFF] bg-[#1A1A2E] px-7 py-6 transition-all duration-300 hover:-translate-y-1 hover:bg-[#1E1E35] hover:shadow-glow-purple-sm"
                 >
                   <p className="font-heading text-[42px] font-bold leading-none tracking-tight text-[#8B7AFF] md:text-[52px]">
                     <NumberTicker

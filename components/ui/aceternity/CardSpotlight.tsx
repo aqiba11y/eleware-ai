@@ -46,7 +46,7 @@ export function CardSpotlight({
       onMouseEnter={() => setOpacity(1)}
       onMouseLeave={() => setOpacity(0)}
       className={cn(
-        "relative overflow-hidden rounded-2xl border border-border-subtle bg-brand-card transition-colors duration-300 hover:border-border-accent",
+        "relative overflow-hidden rounded-2xl border border-border-subtle bg-brand-card transition-all duration-300 hover:-translate-y-[3px] hover:border-border-accent hover:shadow-glow-purple-sm",
         className,
       )}
     >

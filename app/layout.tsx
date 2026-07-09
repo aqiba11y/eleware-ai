@@ -6,6 +6,7 @@ import { SmoothScrollProvider } from "@/components/providers/SmoothScrollProvide
 import { NoiseTexture } from "@/components/signature/NoiseTexture";
 import { CustomCursor } from "@/components/CustomCursor";
 import { PageTransition } from "@/components/PageTransition";
+import { ScrollProgress } from "@/components/ScrollProgress";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { VisitNotifier } from "@/components/VisitNotifier";
@@ -65,6 +66,7 @@ export default function RootLayout({
           Skip to main content
         </a>
         <PageTransition />
+        <ScrollProgress />
         <NoiseTexture opacity={0.035} />
         <CustomCursor />
         <SmoothScrollProvider>{children}</SmoothScrollProvider>

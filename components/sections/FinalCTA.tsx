@@ -51,7 +51,7 @@ export function FinalCTA() {
   const reduce = useReducedMotion();
 
   return (
-    <Section id="book" className="relative overflow-hidden bg-[#13131F]">
+    <Section id="book" className="relative overflow-hidden bg-gradient-to-b from-transparent via-[#13131F] to-transparent">
       {/* Background composition */}
       <AuroraBackground intensity="intense" />
       <MeteorEffect number={6} className="opacity-70" />

@@ -23,7 +23,7 @@ export function WhoItsFor() {
   const reduce = useReducedMotion();
 
   return (
-    <Section id="who-its-for" className="bg-[#13131F]">
+    <Section id="who-its-for" className="bg-gradient-to-b from-transparent via-[#13131F] to-transparent">
       <GridBackground opacity={0.05} cellSize={48} interactive={false} />
 
       <Container className="relative z-10">

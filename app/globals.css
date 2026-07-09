@@ -36,10 +36,57 @@
 
   body {
     background-color: var(--bg-primary);
+    /* Ambient depth: faint purple glows spread down the page so sections
+       blend into one continuous canvas instead of flat blocks */
+    background-image: radial-gradient(
+        ellipse 75% 8% at 15% 2%,
+        rgba(124, 92, 255, 0.07),
+        transparent 70%
+      ),
+      radial-gradient(
+        ellipse 70% 7% at 90% 32%,
+        rgba(91, 63, 224, 0.06),
+        transparent 70%
+      ),
+      radial-gradient(
+        ellipse 75% 7% at 8% 64%,
+        rgba(124, 92, 255, 0.055),
+        transparent 70%
+      ),
+      radial-gradient(
+        ellipse 80% 8% at 85% 96%,
+        rgba(139, 122, 255, 0.06),
+        transparent 70%
+      );
     color: var(--text-body);
     font-family: var(--font-inter), system-ui, sans-serif;
     line-height: 1.6;
     overflow-x: hidden;
+  }
+
+  ::selection {
+    background: rgba(124, 92, 255, 0.35);
+    color: #ffffff;
+  }
+
+  /* Slim branded scrollbar */
+  html {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(124, 92, 255, 0.35) #0e0e1a;
+  }
+  ::-webkit-scrollbar {
+    width: 9px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0e0e1a;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(124, 92, 255, 0.3);
+    border-radius: 8px;
+    border: 2px solid #0e0e1a;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(124, 92, 255, 0.55);
   }
 
   h1,
@@ -61,8 +108,8 @@
   }
 
   .section-pad {
-    padding-top: 140px;
-    padding-bottom: 140px;
+    padding-top: 96px;
+    padding-bottom: 96px;
   }
 
   .container-pad {
@@ -79,8 +126,8 @@
 
   @media (max-width: 768px) {
     .section-pad {
-      padding-top: 80px;
-      padding-bottom: 80px;
+      padding-top: 64px;
+      padding-bottom: 64px;
     }
 
     .container-pad {

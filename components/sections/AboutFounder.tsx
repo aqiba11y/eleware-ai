@@ -64,7 +64,7 @@ export function AboutFounder() {
   const photoY = useTransform(scrollYProgress, [0, 1], [0, -60]);
 
   return (
-    <Section id="founder" className="bg-[#13131F]">
+    <Section id="founder" className="bg-gradient-to-b from-transparent via-[#13131F] to-transparent">
       <Container>
         <motion.div
           variants={reduce ? {} : fadeInUp}

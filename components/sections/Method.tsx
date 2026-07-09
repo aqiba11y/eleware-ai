@@ -13,7 +13,7 @@ export function Method() {
   const reduce = useReducedMotion();
 
   return (
-    <Section id="method" className="bg-[#13131F]">
+    <Section id="method" className="bg-gradient-to-b from-transparent via-[#13131F] to-transparent">
       {/* Subtle wavy background */}
       <WavyBackground
         waveOpacity={0.18}

@@ -21,7 +21,7 @@ export function Section({
     <Tag
       id={id}
       className={cn(
-        "relative w-full py-[80px] lg:py-[140px] overflow-hidden",
+        "relative w-full py-[64px] lg:py-[96px] overflow-hidden",
         className
       )}
     >

@@ -1,6 +1,6 @@
 # Eleware AI — Landing Page
 
-Production-ready landing page for **Eleware AI**, a done-for-you LinkedIn appointment setting agency. Single conversion goal: get visitors to book a free 20-minute discovery call via Calendly.
+Production-ready landing page for **Eleware AI**, a done-for-you LinkedIn appointment setting agency. Single conversion goal: get visitors to book a free 30-minute discovery call via Calendly.
 
 ---
 

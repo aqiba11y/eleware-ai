@@ -330,7 +330,7 @@ export const FAQS = [
 export const FINAL_CTA = {
   eyebrow: "Ready?",
   headline: "Let's fill your calendar.",
-  subhead: "Book a free 20-minute discovery call.",
+  subhead: "Book a free 30-minute discovery call.",
   body: "No pitch. Just clarity on what's blocking your pipeline and whether we're the right fit.",
   cta: "Book your free call",
   calendlyDisplay: "calendly.com/abdullah-elewareai/30min",
